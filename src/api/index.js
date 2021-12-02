@@ -3,6 +3,10 @@ const router = express.Router();
 const authRouter = require("./auth");
 const usersRouter = require("./users");
 
+router.get("/", (req, res) => {
+  res.send("Welcome to my API");
+});
+
 // GET /api/health
 router.get("/health", (req, res) => {
   res.status(200).json({
